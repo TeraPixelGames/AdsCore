@@ -1,0 +1,14 @@
+.import/
+.godot/
+*.translation
+*.import
+
+# IDE/OS cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Mono artifacts (if ever enabled)
+.mono/
+data_*/mono_temp/
