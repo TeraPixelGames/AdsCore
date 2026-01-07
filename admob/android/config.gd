@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-const Library := preload("res://addons/admob/internal/exporters/android/library.gd")
+const Library := preload("res://addons/ads_core/admob/internal/exporters/android/library.gd")
 
 const APPLICATION_ID := "ca-app-pub-3940256099942544~3347511713" # Change to your own AdMob App ID when releasing your game.
 

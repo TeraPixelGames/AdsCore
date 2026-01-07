@@ -24,10 +24,10 @@
 extends EditorPlugin
 
 const MENU_NAME := "AdMob Manager"
-const AdMobEditorMenu := preload("res://addons/admob/internal/editor/editor_menu.gd")
+const AdMobEditorMenu := preload("res://addons/ads_core/admob/internal/editor/editor_menu.gd")
 
-var _main_exporter := preload("res://addons/admob/internal/exporters/main_export_plugin.gd").new()
-var _android_exporter := preload("res://addons/admob/internal/exporters/android/export_plugin.gd").new()
+var _main_exporter := preload("res://addons/ads_core/admob/internal/exporters/main_export_plugin.gd").new()
+var _android_exporter := preload("res://addons/ads_core/admob/internal/exporters/android/export_plugin.gd").new()
 
 func _enter_tree() -> void:
 	add_export_plugin(_main_exporter)

@@ -22,8 +22,8 @@
 
 extends EditorExportPlugin
 
-const Library := preload("res://addons/admob/internal/exporters/android/library.gd")
-const Config := preload("res://addons/admob/android/config.gd")
+const Library := preload("res://addons/ads_core/admob/internal/exporters/android/library.gd")
+const Config := preload("res://addons/ads_core/admob/android/config.gd")
 
 func _get_plugins() -> Array[EditorExportPlugin]:
 	var plugins: Array[EditorExportPlugin]

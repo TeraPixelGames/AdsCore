@@ -20,17 +20,17 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-const PluginVersion := preload("res://addons/admob/internal/version/plugin_version.gd")
-const DownloadService := preload("res://addons/admob/internal/services/network/download_service.gd")
-const ZipService := preload("res://addons/admob/internal/services/archive/zip_service.gd")
-const AndroidExportPlugin := preload("res://addons/admob/internal/exporters/android/export_plugin.gd")
+const PluginVersion := preload("res://addons/ads_core/admob/internal/version/plugin_version.gd")
+const DownloadService := preload("res://addons/ads_core/admob/internal/services/network/download_service.gd")
+const ZipService := preload("res://addons/ads_core/admob/internal/services/archive/zip_service.gd")
+const AndroidExportPlugin := preload("res://addons/ads_core/admob/internal/exporters/android/export_plugin.gd")
 
-const PACKAGE_PATH := "res://addons/admob/android/bin/package.gd"
-const DOWNLOAD_DIR := "res://addons/admob/downloads/android/"
-const EXTRACT_PATH := "res://addons/admob/android/bin/"
+const PACKAGE_PATH := "res://addons/ads_core/admob/android/bin/package.gd"
+const DOWNLOAD_DIR := "res://addons/ads_core/admob/downloads/android/"
+const EXTRACT_PATH := "res://addons/ads_core/admob/android/bin/"
 const BASE_URL := "https://github.com/poingstudios/godot-admob-android/releases/download/%s/%s"
 
-const DialogService := preload("res://addons/admob/internal/services/ui/dialog_service.gd")
+const DialogService := preload("res://addons/ads_core/admob/internal/services/ui/dialog_service.gd")
 
 var _download_service: DownloadService
 var _dialog_service: DialogService

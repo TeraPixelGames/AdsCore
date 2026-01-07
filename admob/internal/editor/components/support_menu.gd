@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-extends "res://addons/admob/internal/editor/popup_menu.gd"
+extends "res://addons/ads_core/admob/internal/editor/popup_menu.gd"
 
 func _init() -> void:
     super._init()

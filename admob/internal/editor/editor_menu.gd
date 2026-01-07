@@ -20,27 +20,27 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-extends "res://addons/admob/internal/editor/popup_menu.gd"
+extends "res://addons/ads_core/admob/internal/editor/popup_menu.gd"
 
 # Services
-const VersionService := preload("res://addons/admob/internal/services/network/version_service.gd")
-const DownloadService := preload("res://addons/admob/internal/services/network/download_service.gd")
+const VersionService := preload("res://addons/ads_core/admob/internal/services/network/version_service.gd")
+const DownloadService := preload("res://addons/ads_core/admob/internal/services/network/download_service.gd")
 
 # Handlers
-const AndroidHandler := preload("res://addons/admob/internal/handlers/android_handler.gd")
-const IOSHandler := preload("res://addons/admob/internal/handlers/ios_handler.gd")
+const AndroidHandler := preload("res://addons/ads_core/admob/internal/handlers/android_handler.gd")
+const IOSHandler := preload("res://addons/ads_core/admob/internal/handlers/ios_handler.gd")
 
 # UI Components
-const AndroidMenu := preload("res://addons/admob/internal/editor/components/android_menu.gd")
-const IOSMenu := preload("res://addons/admob/internal/editor/components/ios_menu.gd")
-const DocumentsMenu := preload("res://addons/admob/internal/editor/components/documents_menu.gd")
-const HelpMenu := preload("res://addons/admob/internal/editor/components/help_menu.gd")
-const SupportMenu := preload("res://addons/admob/internal/editor/components/support_menu.gd")
-const DialogService := preload("res://addons/admob/internal/services/ui/dialog_service.gd")
+const AndroidMenu := preload("res://addons/ads_core/admob/internal/editor/components/android_menu.gd")
+const IOSMenu := preload("res://addons/ads_core/admob/internal/editor/components/ios_menu.gd")
+const DocumentsMenu := preload("res://addons/ads_core/admob/internal/editor/components/documents_menu.gd")
+const HelpMenu := preload("res://addons/ads_core/admob/internal/editor/components/help_menu.gd")
+const SupportMenu := preload("res://addons/ads_core/admob/internal/editor/components/support_menu.gd")
+const DialogService := preload("res://addons/ads_core/admob/internal/services/ui/dialog_service.gd")
 
-const PluginVersion := preload("res://addons/admob/internal/version/plugin_version.gd")
+const PluginVersion := preload("res://addons/ads_core/admob/internal/version/plugin_version.gd")
 
-const DEFAULT_DOWNLOAD_PATH := "res://addons/admob/downloads/"
+const DEFAULT_DOWNLOAD_PATH := "res://addons/ads_core/admob/downloads/"
 
 var _version_service: VersionService
 var _dialog_service: DialogService

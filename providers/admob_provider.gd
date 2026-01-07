@@ -13,7 +13,7 @@ var _pending_actions: Array[Callable] = []
 var _pending_reward_state: Dictionary = {}
 var _request_extras: Dictionary = {}
 var _request_config: Dictionary = {}
-var _test_device_ids: Array[String] = []
+var _test_device_ids: Array = []
 var _initialized: bool = false
 var _initializing: bool = false
 var _test_mode: bool = false
@@ -82,7 +82,7 @@ func load(placement: String, ad_type: String, _opts: Dictionary = {}) -> void:
 	_last_placement_by_type[ad_type] = placement
 	if not _initialized:
 		_queue_action(func() -> void:
-			load(placement, ad_type, _opts)
+			self.load(placement, ad_type, _opts)
 		)
 		return
 	match ad_type:

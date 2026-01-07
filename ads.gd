@@ -14,6 +14,7 @@ enum ErrorCode {
 	LOAD_FAILED_NO_FILL,
 	LOAD_FAILED_NETWORK,
 	LOAD_FAILED_INTERNAL,
+	SHOW_FAILED_INTERNAL,
 	SHOW_FAILED_COOLDOWN,
 	SHOW_FAILED_NOT_LOADED,
 	SHOW_FAILED_UNSUPPORTED,
@@ -32,7 +33,7 @@ signal ad_impression(provider: String, placement: String, ad_type: String)
 signal analytics_event(event_name: String, data: Dictionary)
 
 var _providers: Dictionary = {}
-var _provider_order: Array[String] = []
+var _provider_order: Array = []
 var _caps_config: Dictionary = {}
 var _caps_state: Dictionary = {}
 var _consent: Dictionary = {}
@@ -172,7 +173,7 @@ func is_loaded(placement: String, ad_type: String, provider: String = "") -> boo
 
 
 func get_providers() -> Array[String]:
-	return _provider_order.duplicate()
+	return Array(_provider_order)
 
 
 func get_provider_instance(name: String) -> Object:

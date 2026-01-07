@@ -20,13 +20,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-const PluginVersion := preload("res://addons/admob/internal/version/plugin_version.gd")
-const DownloadService := preload("res://addons/admob/internal/services/network/download_service.gd")
-const ZipService := preload("res://addons/admob/internal/services/archive/zip_service.gd")
-const DialogService := preload("res://addons/admob/internal/services/ui/dialog_service.gd")
-const FileService := preload("res://addons/admob/internal/services/ui/file_service.gd")
+const PluginVersion := preload("res://addons/ads_core/admob/internal/version/plugin_version.gd")
+const DownloadService := preload("res://addons/ads_core/admob/internal/services/network/download_service.gd")
+const ZipService := preload("res://addons/ads_core/admob/internal/services/archive/zip_service.gd")
+const DialogService := preload("res://addons/ads_core/admob/internal/services/ui/dialog_service.gd")
+const FileService := preload("res://addons/ads_core/admob/internal/services/ui/file_service.gd")
 
-const DOWNLOAD_DIR := "res://addons/admob/downloads/ios/"
+const DOWNLOAD_DIR := "res://addons/ads_core/admob/downloads/ios/"
 const EXTRACT_PATH := "res://ios/plugins/"
 const BASE_URL := "https://github.com/poingstudios/godot-admob-ios/releases/download/%s/%s"
 

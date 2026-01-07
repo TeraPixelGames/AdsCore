@@ -21,7 +21,7 @@
 # SOFTWARE.
 
 class_name AdRequest
-const PluginVersion := preload("res://addons/admob/internal/version/plugin_version.gd")
+const PluginVersion := preload("res://addons/ads_core/admob/internal/version/plugin_version.gd")
 
 var keywords: Array[String]
 var mediation_extras: Array[MediationExtras]

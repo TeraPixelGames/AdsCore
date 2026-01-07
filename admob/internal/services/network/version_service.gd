@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-const PluginVersion := preload("res://addons/admob/internal/version/plugin_version.gd")
+const PluginVersion := preload("res://addons/ads_core/admob/internal/version/plugin_version.gd")
 signal version_received()
 
 var _http_request: HTTPRequest
@@ -43,4 +43,4 @@ func _on_request_completed(_result: int, response_code: int, _headers: PackedStr
 			return
 
 	printerr("ERR_001: Couldn't get version supported dynamic for AdMob, the latest supported version listed may be outdated. \n" +
-	"Read more about on: res://addons/admob/docs/errors/ERR_001.md")
+	"Read more about on: res://addons/ads_core/admob/docs/errors/ERR_001.md")

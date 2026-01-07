@@ -22,7 +22,7 @@
 
 extends EditorExportPlugin
 
-const CFG_FILE_PATH := "res://addons/admob/plugin.cfg"
+const CFG_FILE_PATH := "res://addons/ads_core/admob/plugin.cfg"
 	
 func _export_begin(features: PackedStringArray, is_debug: bool, path: String, flags: int) -> void:
 	var file = FileAccess.open(CFG_FILE_PATH, FileAccess.READ)

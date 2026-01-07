@@ -2,11 +2,11 @@
 extends EditorPlugin
 
 var _debug_dock: Control
+var _admob_plugin: EditorPlugin
 
 func _enter_tree() -> void:
 	_register_project_settings()
-	if not FileAccess.file_exists("res://addons/admob/plugin.cfg"):
-		push_warning("AdsCore: AdMob addon not found at res://addons/admob/plugin.cfg; AdMob provider will run in stub mode.")
+	_enable_admob()
 	add_autoload_singleton("Ads", "res://addons/ads_core/ads.gd")
 	if _debug_dock == null:
 		_debug_dock = preload("res://addons/ads_core/debug/ads_debug_panel.gd").new()
@@ -19,6 +19,7 @@ func _exit_tree() -> void:
 		_debug_dock.queue_free()
 		_debug_dock = null
 	remove_autoload_singleton("Ads")
+	_disable_admob()
 
 
 func _register_project_settings() -> void:
@@ -84,3 +85,24 @@ func _register_project_settings() -> void:
 			"usage": PROPERTY_USAGE_DEFAULT
 		}
 		ProjectSettings.add_property_info(info)
+
+
+func _enable_admob() -> void:
+	var admob_path := "res://addons/ads_core/admob/admob.gd"
+	if not FileAccess.file_exists(admob_path):
+		push_warning("AdsCore: AdMob addon not found at %s; AdMob provider will run in stub mode." % admob_path)
+		return
+	var admob_script := load(admob_path)
+	if admob_script == null:
+		push_warning("AdsCore: Failed to load %s; AdMob provider will run in stub mode." % admob_path)
+		return
+	_admob_plugin = admob_script.new()
+	if _admob_plugin:
+		add_child(_admob_plugin)
+
+
+func _disable_admob() -> void:
+	if _admob_plugin and is_instance_valid(_admob_plugin):
+		remove_child(_admob_plugin)
+		_admob_plugin.queue_free()
+		_admob_plugin = null

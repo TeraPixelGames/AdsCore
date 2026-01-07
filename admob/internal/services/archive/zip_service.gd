@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-const FileService := preload("res://addons/admob/internal/services/ui/file_service.gd")
+const FileService := preload("res://addons/ads_core/admob/internal/services/ui/file_service.gd")
 
 enum StripMode {NONE, AUTO_DETECT, FORCE}
 

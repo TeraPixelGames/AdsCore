@@ -1,5 +1,4 @@
 extends RefCounted
-class_name AdsProvider
 
 var ads: Node = null
 var name: String = ""

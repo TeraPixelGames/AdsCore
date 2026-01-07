@@ -20,10 +20,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-extends "res://addons/admob/internal/editor/popup_menu.gd"
+extends "res://addons/ads_core/admob/internal/editor/popup_menu.gd"
 
-const PluginVersion := preload("res://addons/admob/internal/version/plugin_version.gd")
-const IOSHandler := preload("res://addons/admob/internal/handlers/ios_handler.gd")
+const PluginVersion := preload("res://addons/ads_core/admob/internal/version/plugin_version.gd")
+const IOSHandler := preload("res://addons/ads_core/admob/internal/handlers/ios_handler.gd")
 
 var _handler: IOSHandler
 

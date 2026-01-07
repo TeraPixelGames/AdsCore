@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-const ROOT_BIN_PATH := "res://addons/admob/android/bin"
+const ROOT_BIN_PATH := "res://addons/ads_core/admob/android/bin"
 
 var path: String
 var is_enabled: bool
